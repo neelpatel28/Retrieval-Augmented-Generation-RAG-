@@ -1,0 +1,23 @@
+# RAG System Dependencies
+# Install with: pip install -r requirements.txt
+
+# PDF Processing
+PyMuPDF==1.24.5             # Best PDF text extraction (fitz)
+
+# Embeddings
+sentence-transformers==3.0.1  # Local embedding model (all-MiniLM-L6-v2)
+torch>=2.0.0                  # PyTorch backend for sentence-transformers
+
+# Vector Store
+faiss-cpu==1.8.0             # FAISS for similarity search (CPU version)
+numpy>=1.24.0
+
+# Web Server
+flask==3.0.3
+flask-cors==4.0.1
+
+# LLM Integration
+anthropic>=0.30.0            # Claude API client
+
+# Utilities
+tqdm>=4.66.0                 # Progress bars
