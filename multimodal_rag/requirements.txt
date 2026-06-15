@@ -1,0 +1,46 @@
+# ============================================================
+#  requirements.txt — Multimodal RAG System
+#  Install: pip install -r requirements.txt
+# ============================================================
+
+# ── Core ─────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# ── Ingestion ────────────────────────────────────────────────
+pymupdf>=1.23.0          # PDF parsing (fitz)
+pdfplumber>=0.10.0       # PDF table extraction (optional but recommended)
+python-pptx>=0.6.21      # PPT parsing + PPT generation
+pytesseract>=0.3.10      # OCR for images (optional — requires Tesseract binary)
+
+# ── Chunking ─────────────────────────────────────────────────
+langchain-text-splitters>=0.2.0
+tiktoken>=0.5.0
+
+# ── Embeddings ───────────────────────────────────────────────
+sentence-transformers>=2.7.0  # BGE-M3, CLIP
+torch>=2.0.0                  # Required by sentence-transformers
+
+# ── Vector Store ─────────────────────────────────────────────
+chromadb>=0.4.0
+
+# ── LLM Backends (install based on your choice) ──────────────
+groq>=0.9.0              # Groq API (recommended, free)
+# openai>=1.0.0          # OpenAI API (paid)
+# requests>=2.31.0       # Already included, needed for Ollama
+
+# ── Video Processing ─────────────────────────────────────────
+openai-whisper>=20231117  # Audio transcription
+opencv-python>=4.8.0      # Video frame extraction
+Pillow>=10.0.0            # Image processing
+
+# ── UI ───────────────────────────────────────────────────────
+streamlit>=1.30.0
+
+# ── API Backend (optional) ───────────────────────────────────
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# ── Utilities ────────────────────────────────────────────────
+requests>=2.31.0
+numpy>=1.24.0
